@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7zL-1y-iyF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Article List View Controller-->
+        <scene sceneID="Im2-Q3-V3Z">
+            <objects>
+                <viewController id="QU6-wR-bii" customClass="ArticleListViewController" customModule="weather2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KSb-Gg-eho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MIq-1J-ymW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MIq-1J-ymW" firstAttribute="bottom" secondItem="Yl0-4M-R3x" secondAttribute="bottom" id="A2l-pa-HCJ"/>
+                            <constraint firstItem="MIq-1J-ymW" firstAttribute="leading" secondItem="Yl0-4M-R3x" secondAttribute="leading" id="NRz-fV-RWn"/>
+                            <constraint firstItem="MIq-1J-ymW" firstAttribute="trailing" secondItem="Yl0-4M-R3x" secondAttribute="trailing" id="Ncz-qZ-7vh"/>
+                            <constraint firstItem="MIq-1J-ymW" firstAttribute="top" secondItem="KSb-Gg-eho" secondAttribute="top" id="sHc-4M-Xmm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yl0-4M-R3x"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3jh-Ak-VZN"/>
+                    <connections>
+                        <outlet property="tableView" destination="MIq-1J-ymW" id="ewm-V0-RK3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Du-Ma-Z5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1735.2" y="133.5832083958021"/>
+        </scene>
+        <!--現在の天気-->
+        <scene sceneID="7bx-r2-4P2">
+            <objects>
+                <navigationController title="現在の天気" automaticallyAdjustsScrollViewInsets="NO" id="7zL-1y-iyF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0z4-iE-Z7R">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QU6-wR-bii" kind="relationship" relationship="rootViewController" id="7lK-3i-VRv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKk-NV-ifv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
